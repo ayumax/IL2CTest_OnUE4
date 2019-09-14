@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Core\il2c.c" />
+    <ClCompile Include="src\Core\il2c_allocator.c" />
+    <ClCompile Include="src\Core\il2c_debug.c" />
+    <ClCompile Include="src\Core\il2c_exception.c" />
+    <ClCompile Include="src\Core\il2c_gc.c" />
+    <ClCompile Include="src\Core\il2c_thread.c" />
+    <ClCompile Include="src\Platform\arduino.c" />
+    <ClCompile Include="src\Platform\fmod.c" />
+    <ClCompile Include="src\Platform\freertos.c" />
+    <ClCompile Include="src\Platform\heap.c" />
+    <ClCompile Include="src\Platform\linux.c" />
+    <ClCompile Include="src\Platform\no-threading.c" />
+    <ClCompile Include="src\Platform\pthread.c" />
+    <ClCompile Include="src\Platform\strings.c" />
+    <ClCompile Include="src\Platform\uefi.c" />
+    <ClCompile Include="src\Platform\wdm.c" />
+    <ClCompile Include="src\Platform\windows.c" />
+    <ClCompile Include="src\System\AppDomain.c" />
+    <ClCompile Include="src\System\Array.c" />
+    <ClCompile Include="src\System\Boolean.c" />
+    <ClCompile Include="src\System\Byte.c" />
+    <ClCompile Include="src\System\Char.c" />
+    <ClCompile Include="src\System\Console.c" />
+    <ClCompile Include="src\System\Delegate.c" />
+    <ClCompile Include="src\System\Double.c" />
+    <ClCompile Include="src\System\Enum.c" />
+    <ClCompile Include="src\System\EventArgs.c" />
+    <ClCompile Include="src\System\Exception.c" />
+    <ClCompile Include="src\System\FormatException.c" />
+    <ClCompile Include="src\System\GC.c" />
+    <ClCompile Include="src\System\IDisposable.c" />
+    <ClCompile Include="src\System\IFormatProvider.c" />
+    <ClCompile Include="src\System\IFormattable.c" />
+    <ClCompile Include="src\System\IndexOutOfRangeException.c" />
+    <ClCompile Include="src\System\Int16.c" />
+    <ClCompile Include="src\System\Int32.c" />
+    <ClCompile Include="src\System\Int64.c" />
+    <ClCompile Include="src\System\IntPtr.c" />
+    <ClCompile Include="src\System\InvalidCastException.c" />
+    <ClCompile Include="src\System\MulticastDelegate.c" />
+    <ClCompile Include="src\System\NullReferenceException.c" />
+    <ClCompile Include="src\System\Object.c" />
+    <ClCompile Include="src\System\Runtime\CompilerServices\RuntimeHelpers.c" />
+    <ClCompile Include="src\System\Runtime\InteropServices\GCHandle.c" />
+    <ClCompile Include="src\System\Runtime\InteropServices\NativePointer.c" />
+    <ClCompile Include="src\System\SByte.c" />
+    <ClCompile Include="src\System\Single.c" />
+    <ClCompile Include="src\System\String.c" />
+    <ClCompile Include="src\System\Threading\Interlocked.c" />
+    <ClCompile Include="src\System\Threading\Monitor.c" />
+    <ClCompile Include="src\System\Threading\ParameterizedThreadStart.c" />
+    <ClCompile Include="src\System\Threading\Thread.c" />
+    <ClCompile Include="src\System\Threading\ThreadStart.c" />
+    <ClCompile Include="src\System\Type.c" />
+    <ClCompile Include="src\System\UInt16.c" />
+    <ClCompile Include="src\System\UInt32.c" />
+    <ClCompile Include="src\System\UInt64.c" />
+    <ClCompile Include="src\System\UIntPtr.c" />
+    <ClCompile Include="src\System\UnhandledExceptionEventArgs.c" />
+    <ClCompile Include="src\System\UnhandledExceptionEventHandler.c" />
+    <ClCompile Include="src\System\ValueType.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\il2c.h" />
+    <ClInclude Include="include\mscorlib.h" />
+    <ClInclude Include="include\System.Runtime.h" />
+    <ClInclude Include="include\System\AppDomain.h" />
+    <ClInclude Include="include\System\Array.h" />
+    <ClInclude Include="include\System\Boolean.h" />
+    <ClInclude Include="include\System\Byte.h" />
+    <ClInclude Include="include\System\Char.h" />
+    <ClInclude Include="include\System\Console.h" />
+    <ClInclude Include="include\System\Delegate.h" />
+    <ClInclude Include="include\System\Double.h" />
+    <ClInclude Include="include\System\Enum.h" />
+    <ClInclude Include="include\System\EventArgs.h" />
+    <ClInclude Include="include\System\Exception.h" />
+    <ClInclude Include="include\System\FormatException.h" />
+    <ClInclude Include="include\System\GC.h" />
+    <ClInclude Include="include\System\IDisposable.h" />
+    <ClInclude Include="include\System\IFormatProvider.h" />
+    <ClInclude Include="include\System\IFormattable.h" />
+    <ClInclude Include="include\System\IndexOutOfRangeException.h" />
+    <ClInclude Include="include\System\Int16.h" />
+    <ClInclude Include="include\System\Int32.h" />
+    <ClInclude Include="include\System\Int64.h" />
+    <ClInclude Include="include\System\IntPtr.h" />
+    <ClInclude Include="include\System\InvalidCastException.h" />
+    <ClInclude Include="include\System\MulticastDelegate.h" />
+    <ClInclude Include="include\System\NullReferenceException.h" />
+    <ClInclude Include="include\System\Object.h" />
+    <ClInclude Include="include\System\RuntimeFieldHandle.h" />
+    <ClInclude Include="include\System\Runtime\CompilerServices\RuntimeHelpers.h" />
+    <ClInclude Include="include\System\Runtime\InteropServices\GCHandle.h" />
+    <ClInclude Include="include\System\Runtime\InteropServices\GCHandleType.h" />
+    <ClInclude Include="include\System\Runtime\InteropServices\NativePointer.h" />
+    <ClInclude Include="include\System\SByte.h" />
+    <ClInclude Include="include\System\Single.h" />
+    <ClInclude Include="include\System\String.h" />
+    <ClInclude Include="include\System\Threading\Interlocked.h" />
+    <ClInclude Include="include\System\Threading\Monitor.h" />
+    <ClInclude Include="include\System\Threading\ParameterizedThreadStart.h" />
+    <ClInclude Include="include\System\Threading\Thread.h" />
+    <ClInclude Include="include\System\Threading\ThreadStart.h" />
+    <ClInclude Include="include\System\Type.h" />
+    <ClInclude Include="include\System\UInt16.h" />
+    <ClInclude Include="include\System\UInt32.h" />
+    <ClInclude Include="include\System\UInt64.h" />
+    <ClInclude Include="include\System\UIntPtr.h" />
+    <ClInclude Include="include\System\UnhandledExceptionEventArgs.h" />
+    <ClInclude Include="include\System\UnhandledExceptionEventHandler.h" />
+    <ClInclude Include="include\System\ValueType.h" />
+    <ClInclude Include="src\il2c_private.h" />
+    <ClInclude Include="src\Platform\arduino.h" />
+    <ClInclude Include="src\Platform\debugbreak.h" />
+    <ClInclude Include="src\Platform\efi\amd64\efibind.h" />
+    <ClInclude Include="src\Platform\efi\amd64\pe.h" />
+    <ClInclude Include="src\Platform\efi\arm64\efibind.h" />
+    <ClInclude Include="src\Platform\efi\arm\efibind.h" />
+    <ClInclude Include="src\Platform\efi\efi.h" />
+    <ClInclude Include="src\Platform\efi\efiapi.h" />
+    <ClInclude Include="src\Platform\efi\efichar.h" />
+    <ClInclude Include="src\Platform\efi\eficon.h" />
+    <ClInclude Include="src\Platform\efi\eficonsctl.h" />
+    <ClInclude Include="src\Platform\efi\efidebug.h" />
+    <ClInclude Include="src\Platform\efi\efidef.h" />
+    <ClInclude Include="src\Platform\efi\efidevp.h" />
+    <ClInclude Include="src\Platform\efi\efierr.h" />
+    <ClInclude Include="src\Platform\efi\efifpswa.h" />
+    <ClInclude Include="src\Platform\efi\efifs.h" />
+    <ClInclude Include="src\Platform\efi\efigop.h" />
+    <ClInclude Include="src\Platform\efi\efilib.h" />
+    <ClInclude Include="src\Platform\efi\efinet.h" />
+    <ClInclude Include="src\Platform\efi\efipart.h" />
+    <ClInclude Include="src\Platform\efi\efipciio.h" />
+    <ClInclude Include="src\Platform\efi\efiprot.h" />
+    <ClInclude Include="src\Platform\efi\efipxebc.h" />
+    <ClInclude Include="src\Platform\efi\efiser.h" />
+    <ClInclude Include="src\Platform\efi\efistdarg.h" />
+    <ClInclude Include="src\Platform\efi\efiuga.h" />
+    <ClInclude Include="src\Platform\efi\efi_nii.h" />
+    <ClInclude Include="src\Platform\efi\i386\efibind.h" />
+    <ClInclude Include="src\Platform\efi\i386\pe.h" />
+    <ClInclude Include="src\Platform\freertos.h" />
+    <ClInclude Include="src\Platform\gcc.h" />
+    <ClInclude Include="src\Platform\heap.h" />
+    <ClInclude Include="src\Platform\linux.h" />
+    <ClInclude Include="src\Platform\msvc.h" />
+    <ClInclude Include="src\Platform\no-threading.h" />
+    <ClInclude Include="src\Platform\pthread.h" />
+    <ClInclude Include="src\Platform\strings.h" />
+    <ClInclude Include="src\Platform\uefi.h" />
+    <ClInclude Include="src\Platform\wdm.h" />
+    <ClInclude Include="src\Platform\windows.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{F399EA62-5A26-413B-BE3D-10D91794495B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>IL2CRuntime</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)/include;$(ProjectDir)/src%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)/include;$(ProjectDir)/src%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)/include;$(ProjectDir)/src%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)/include;$(ProjectDir)/src%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

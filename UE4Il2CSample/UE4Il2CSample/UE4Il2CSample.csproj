@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IL2CEnableCpp>true</IL2CEnableCpp>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IL2C.Build" Version="0.4.70" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy $(OutDir)IL2C\* $(SolutionDir)..\Source\IL2CTest\ /D /S /R /Y /I /K&#xD;&#xA;" />
+  </Target>
+
+</Project>
