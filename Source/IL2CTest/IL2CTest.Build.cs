@@ -22,7 +22,13 @@ public class IL2CTest : ModuleRules
         });
 
         // IL2C.Runtime.libÇÃéQè∆í«â¡
-        PublicAdditionalLibraries.Add(ModuleDirectory + "/../../native/x64/Release/IL2C.Runtime.lib");
-
+        if (Target.Platform == UnrealBuildTool.UnrealTargetPlatform.Win64)
+        {
+            PublicAdditionalLibraries.Add(ModuleDirectory + "/../../native/lib/Release/libil2c-msvc-win-x64-rtd.lib");
+        }
+        else if (Target.Platform == UnrealBuildTool.UnrealTargetPlatform.Win32)
+        {
+            PublicAdditionalLibraries.Add(ModuleDirectory + "/../../native/lib/Release/libil2c-msvc-win-Win32-rtd.lib");
+        }
     }
 }
