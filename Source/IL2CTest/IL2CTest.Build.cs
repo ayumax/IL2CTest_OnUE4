@@ -22,13 +22,29 @@ public class IL2CTest : ModuleRules
         });
 
         // IL2C.Runtime.libÇÃéQè∆í«â¡
-        if (Target.Platform == UnrealBuildTool.UnrealTargetPlatform.Win64)
+        var libRootPath = ModuleDirectory + "/../../native/lib/";
+
+        if (Target.Platform == UnrealTargetPlatform.Win64)
         {
-            PublicAdditionalLibraries.Add(ModuleDirectory + "/../../native/lib/Release/libil2c-msvc-win-x64-rtd.lib");
+            if (Target.Configuration == UnrealTargetConfiguration.Debug && Target.bDebugBuildsActuallyUseDebugCRT)
+            {
+                PublicAdditionalLibraries.Add(libRootPath + "Debug/libil2c-msvc-win-x64-rtd.lib");
+            }
+            else
+            { 
+                PublicAdditionalLibraries.Add(libRootPath + "Release/libil2c-msvc-win-x64-rtd.lib");
+            }
         }
-        else if (Target.Platform == UnrealBuildTool.UnrealTargetPlatform.Win32)
+        else if (Target.Platform == UnrealTargetPlatform.Win32)
         {
-            PublicAdditionalLibraries.Add(ModuleDirectory + "/../../native/lib/Release/libil2c-msvc-win-Win32-rtd.lib");
+            if (Target.Configuration == UnrealTargetConfiguration.Debug && Target.bDebugBuildsActuallyUseDebugCRT)
+            {
+                PublicAdditionalLibraries.Add(libRootPath + "Debug/libil2c-msvc-win-Win32-rtd.lib");
+            }
+            else
+            {
+                PublicAdditionalLibraries.Add(libRootPath + "Release/libil2c-msvc-win-Win32-rtd.lib");
+            }
         }
     }
 }
