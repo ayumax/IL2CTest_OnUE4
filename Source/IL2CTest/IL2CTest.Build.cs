@@ -1,6 +1,7 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
 using UnrealBuildTool;
+using System.IO;
 
 public class IL2CTest : ModuleRules
 {
@@ -10,19 +11,21 @@ public class IL2CTest : ModuleRules
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay" });
 
+        var runtimeRoot = Path.Combine(ModuleDirectory, @"..\..\IL2C.Runtime.Artifacts.0.4.93\");
+
         PublicIncludePaths.AddRange(new string[]
         {
             // IL2C.Runtimeのincludeディレクトリの追加
-            ModuleDirectory + "/../../native/src/",
-            ModuleDirectory + "/../../native/include/",
+            Path.Combine(runtimeRoot, @"src\"),
+            Path.Combine(runtimeRoot, @"include\"),
 
             // C#から生成されたCファイルのincludeディレクトリの追加
-            ModuleDirectory + "/src/",
-            ModuleDirectory + "/include/"
+            Path.Combine(ModuleDirectory, @"src\"),
+            Path.Combine(ModuleDirectory, @"include\"),
         });
 
         // IL2C.Runtime.libの参照追加
-        var libRootPath = ModuleDirectory + "/../../native/lib/";
+        var libRootPath = Path.Combine(runtimeRoot, @"lib\");
 
         if (Target.Platform == UnrealTargetPlatform.Win64)
         {
